@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ -z ${TOMCAT_HOME} ]; then
+  echo "[`date`] [ERROR] \${TOMCAT_HOME} not found."
+  exit 1
+fi
+if [ ! -d ${TOMCAT_HOME} ]; then
+  echo "[`date`] [ERROR] TOMCAT_HOME=${TOMCAT_HOME} not exists."
+  exit 1
+fi
+
 if [ -z "${JVM_MIN_MEM}" ]; then
   JVM_MIN_MEM=256
 fi
