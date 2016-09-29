@@ -12,7 +12,7 @@ RUN apt-get install -y unzip \
   && curl --fail --location --retry 3 \
     http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.37/bin/apache-tomcat-8.0.37.tar.gz \
     -o /tmp/tomcat.tar.gz \
-  && mkdir =p /opt/app/ \
+  && mkdir -p /opt/app/ \
   && tar -zvxf /tmp/tomcat.tar.gz -C /opt/app/ \
   && rm -rf /tmp/tomcat.tar.gz ${TOMCAT_HOME}/webapps/*
 
