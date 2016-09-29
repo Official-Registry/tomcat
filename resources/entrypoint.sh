@@ -16,7 +16,7 @@ if [ -z "${JVM_MAX_MEM}" ]; then
   JVM_MAX_MEM=1024
 fi
 
-JAVA_OPTS="${JAVA_OPTS} -Xms${MEM_MIN}m -Xmx${MEM_MAX}m"
+JAVA_OPTS="${JAVA_OPTS} -Xms${JVM_MIN_MEM}m -Xmx${JVM_MAX_MEM}m"
 JAVA_OPTS="${JAVA_OPTS} -Dfile.encoding=utf-8 -Duser.timezone=Asia/Shanghai"
 
 # Java Remote Debug Enabled
