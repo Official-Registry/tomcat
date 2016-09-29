@@ -1,6 +1,6 @@
 FROM quay.io/lizhongwen/oracle-jdk:1.8
 
-MAINTAINER github.com/Official-Registry/oracle-jdk, lizhongwen1989@gmail.com
+MAINTAINER github.com/Official-Registry, lizhongwen1989@gmail.com
 
 ENV TOMCAT_VERSION=8.0.37
 ENV TOMCAT_HOME=/opt/app/apache-tomcat-${TOMCAT_VERSION}
