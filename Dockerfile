@@ -5,6 +5,8 @@ MAINTAINER github.com/Official-Registry/oracle-jdk, lizhongwen1989@gmail.com
 ENV TOMCAT_VERSION=8.0.36
 ENV TOMCAT_HOME=/opt/app/apache-tomcat-${TOMCAT_VERSION}
 ENV JAVA_DEBUG=false
+ENV JVM_MIN_MEM=256
+ENV JVM_MAX_MEM=1024
 
 RUN apt-get install -y unzip \
   && curl --fail --location --retry 3 \
