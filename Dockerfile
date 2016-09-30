@@ -12,8 +12,9 @@ RUN apt-get install -y unzip \
   && curl --fail --location --retry 3 \
     http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz \
     -o /tmp/tomcat.tar.gz \
+  && tar -zvxf /tmp/tomcat.tar.gz -C /tmp/ \
   && mkdir -p /opt/app/ \
-  && tar -zvxf /tmp/tomcat.tar.gz -C /opt/app/ \
+  && mv /tmp/apache-tomcat-${TOMCAT_VERSION} /opt/app/ \
   && rm -rf /tmp/tomcat.tar.gz ${TOMCAT_HOME}/webapps/*
 
 ADD resources/entrypoint.sh ${TOMCAT_HOME}/bin/
