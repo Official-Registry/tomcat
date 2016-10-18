@@ -3,7 +3,7 @@ FROM quay.io/lizhongwen/oracle-jdk:1.8
 MAINTAINER github.com/Official-Registry, lizhongwen1989@gmail.com
 
 ENV TOMCAT_VERSION=8.5.5
-ENV TOMCAT_HOME=/opt/app/apache-tomcat-${TOMCAT_VERSION}
+ENV TOMCAT_HOME=/opt/app/tomcat
 ENV JAVA_DEBUG=false
 ENV JVM_MIN_MEM=256
 ENV JVM_MAX_MEM=1024
