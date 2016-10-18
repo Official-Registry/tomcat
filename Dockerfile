@@ -14,7 +14,7 @@ RUN apt-get install -y unzip \
     -o /tmp/tomcat.tar.gz \
   && tar -zvxf /tmp/tomcat.tar.gz -C /tmp/ \
   && mkdir -p /opt/app/ \
-  && mv /tmp/apache-tomcat-${TOMCAT_VERSION} /opt/app/ \
+  && mv /tmp/apache-tomcat-${TOMCAT_VERSION} /opt/app/tomcat \
   && rm -rf /tmp/tomcat.tar.gz ${TOMCAT_HOME}/webapps/*
 
 ADD resources/entrypoint.sh ${TOMCAT_HOME}/bin/
