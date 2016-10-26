@@ -10,7 +10,7 @@ ENV JVM_MAX_MEM=1024
 
 RUN apt-get install -y unzip \
   && curl --fail --location --retry 3 \
-    http://mirrors.cnnic.cn/apache/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.tar.gz \
+    https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.72/bin/apache-tomcat-7.0.72.tar.gz \
     -o /tmp/tomcat.tar.gz \
   && tar -zvxf /tmp/tomcat.tar.gz -C /tmp/ \
   && mkdir -p /opt/app/ \
