@@ -2,7 +2,7 @@ FROM quay.io/lizhongwen/oracle-jdk:1.8
 
 MAINTAINER github.com/Official-Registry, lizhongwen1989@gmail.com
 
-ENV TOMCAT_VERSION=8.0.37
+ENV TOMCAT_VERSION=8.0.38
 ENV TOMCAT_HOME=/opt/app/tomcat
 ENV JAVA_DEBUG=false
 ENV JVM_MIN_MEM=256
@@ -10,7 +10,7 @@ ENV JVM_MAX_MEM=1024
 
 RUN apt-get install -y unzip \
   && curl --fail --location --retry 3 \
-    http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.37/bin/apache-tomcat-8.0.37.tar.gz \
+    https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.38/bin/apache-tomcat-8.0.38.tar.gz \
     -o /tmp/tomcat.tar.gz \
   && tar -zvxf /tmp/tomcat.tar.gz -C /tmp/ \
   && mkdir -p /opt/app/ \
